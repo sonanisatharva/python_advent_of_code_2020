@@ -1,9 +1,6 @@
 with open('input.txt') as f:
     lines = f.readlines()
-
 n = [str(line.strip()) for line in lines]
-# print(n)
-
 answer = 0
 for i in n:
     first, second = i.split(':')
@@ -15,5 +12,4 @@ for i in n:
             count += 1
     if (int(num1) <= count <= int(num2)):
         answer += 1
-
 print('ANSWER = ', answer)
