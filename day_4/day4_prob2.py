@@ -20,6 +20,7 @@ for line in data:
             field = field.split(":")
             passport[field[0]] = field[1]
 final = 0
+print(passports)
 for passport in passports:
 
     try:
