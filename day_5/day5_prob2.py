@@ -31,13 +31,29 @@ def column(seat):
 
 largest = -1
 seat_id = []
-
+rrow = []
+ccol = []
 for i in input:
     r = row(i[:7])
+    rrow.append(r)
     c = column(i[7:])
+    ccol.append(c)
     id = r * 8 + c
     seat_id.append(id)
     if id > largest:
         largest = id
 
-print(largest)
+# print(largest)
+sort_seat_id = sorted(seat_id)
+# print(sorted(rrow))
+# print(ccol)
+# print(sort_seat_id)
+
+prev = 0
+missing = []
+for p in sort_seat_id:
+    if (prev != p -1):
+        missing.append(p-1)
+    prev = p
+
+print(missing)
